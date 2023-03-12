@@ -1,9 +1,10 @@
 import React from "react";
+import constraction from "../../assets/constraction.svg";
 
 const About = () => {
   return (
     <div>
-      <h2>This is About</h2>
+      <img src={constraction} alt="" srcset="" height="600" width="500" />
     </div>
   );
 };
