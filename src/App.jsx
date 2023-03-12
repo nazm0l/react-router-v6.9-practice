@@ -27,6 +27,9 @@ function App() {
         {
           path: "/comments",
           element: <Comments />,
+          loader: async () => {
+            return fetch("https://jsonplaceholder.typicode.com/comments");
+          },
         },
         {
           path: "/about",
