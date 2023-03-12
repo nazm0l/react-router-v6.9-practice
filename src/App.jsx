@@ -20,6 +20,9 @@ function App() {
         {
           path: "/users",
           element: <Users />,
+          loader: async () => {
+            return fetch("https://jsonplaceholder.typicode.com/users");
+          },
         },
         {
           path: "/comments",
