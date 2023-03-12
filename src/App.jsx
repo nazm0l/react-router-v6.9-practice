@@ -4,6 +4,7 @@ import About from "./components/About/About";
 import Comments from "./components/Comments/Comments";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
+import NotFound from "./components/NotFound/NotFound";
 import Users from "./components/Users/Users";
 import Layout from "./layout/Layout";
 
@@ -36,6 +37,10 @@ function App() {
           element: <About />,
         },
       ],
+    },
+    {
+      path: "*",
+      element: <NotFound />,
     },
   ]);
 
