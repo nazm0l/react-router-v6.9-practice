@@ -5,6 +5,7 @@ import Comments from "./components/Comments/Comments";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import NotFound from "./components/NotFound/NotFound";
+import UserDetails from "./components/UserDetails/UserDetails";
 import Users from "./components/Users/Users";
 import Layout from "./layout/Layout";
 
@@ -23,6 +24,15 @@ function App() {
           element: <Users />,
           loader: async () => {
             return fetch("https://jsonplaceholder.typicode.com/users");
+          },
+        },
+        {
+          path: "/users/:userId",
+          element: <UserDetails />,
+          loader: async ({ params }) => {
+            return fetch(
+              `https://jsonplaceholder.typicode.com/users/${params.userId}`
+            );
           },
         },
         {
